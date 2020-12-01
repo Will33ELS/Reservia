@@ -68,7 +68,7 @@ ul{
 .navigation-item{
     display: block;
     padding: 38px 15px 0 15px;
-    color: #F2F2F2;
+    color: gray;
     text-decoration: none;
     transition: border 0.2s, color 0.2s;
 }
@@ -213,6 +213,7 @@ ul{
     border-radius: 20px;
     background-color: white;
     position: relative;
+    box-shadow: 5px 5px 5px gray;
 }
 .hebergement-item img{
     width: 100%;
@@ -263,6 +264,7 @@ ul{
     padding: 5px;
     background-color: white;
     border-radius: 25px;
+    box-shadow: 5px 5px 5px gray;
 }
 .popular-item img{
     height: 126px;
