@@ -1,15 +1,154 @@
 /*
 
     Couleur bleu #0065FC, bleu clair #DEEBFF et gris #F2F2F2
-
+    max XS size: 600px
+    max SM size: 768px
+    max MD size: 992px
+    max LG size: 1199px
+    min XL size: 1200px
 */
 
+/* PARAMETRES GENERAUX */
 @font-face {
     font-family: "Raleway";
-    src: url("../font/Raleway-Italic_wght.ttf") format("truetype"),
-    url("../font/Raleway_wght.ttf") format("truetype");
+    src: url("../font/Raleway_wght.ttf") format("truetype");
 }
-
 html{
     font-family: "Raleway", serif;
+}
+body{
+    margin: 0;
+}
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* CLASS UTILES*/
+.content{
+    margin: 0 30px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+ul{
+    padding: 0;
+}
+
+.list-no-style{
+    list-style: none;
+}
+
+.logo{
+    margin-top: 30px;
+}
+
+/* BARRE DE NAVIGATION*/
+.navigation{
+    float: right;
+    display: flex;
+}
+.navigation-item{
+    display: block;
+    padding: 38px 15px 0 15px;
+    color: #F2F2F2;
+    text-decoration: none;
+    transition: border 0.2s, color 0.2s;
+}
+.navigation-item.active, .navigation-item:hover{
+    color: #0065FC;
+    text-decoration: none;
+}
+.register{
+    color: #0065FC;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 35px 15px;
+    float: right;
+    order:3;
+}
+
+/* FOOTER */
+footer{
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+}
+footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
+    color: #0065FC;
+    text-decoration: underline;
+}
+
+
+/** Version Mobile  */
+@media only screen and (max-width: 767px) {
+    /* CLASS UTILES */
+    .content{
+        margin: 0;
+    }
+    .display-none{
+        display: none;
+    }
+    .display-block{
+        display: block;
+    }
+
+    /* BARRE DE NAVIGATION */
+    .register{
+        order: 0;
+        align-content: end;
+    }
+    .logo{
+        margin: 20px 0 0 20px;
+    }
+    .navigation-item{
+        flex: 1;
+        color: black;
+        margin: 0;
+        text-align: center;
+        border-bottom: #F2F2F2 3px solid;
+        padding-top: 10px;
+    }
+    .navigation-item.active, .navigation-item:hover{
+        border-bottom: #0065FC 3px solid;
+    }
+    .navigation{
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .a-propos, .nos-hebergements, .assistance{
+        width: 100%;
+    }
+}
+
+/** Version ordinateur  */
+@media only screen and (min-width: 768px) {
+    /* CLASS UTILES */
+    .display-lg-none{
+        display: none;
+    }
+    .display-lg-block{
+        display: block;
+    }
+
+    /* BARRE DE NAVIGATION */
+    .navigation-item.active, .navigation-item:hover{
+        padding: 35px 15px 0 15px;
+        border-top: #0065FC 3px solid;
+    }
+
+    /* FOOTER */
+    .a-propos, .nos-hebergements, .assistance{
+        width: 25%;
+    }
 }
