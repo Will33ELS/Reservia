@@ -35,9 +35,25 @@ h1{
 ul{
     padding: 0;
 }
-
 .list-no-style{
     list-style: none;
+}
+.extends-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
 }
 
 .logo{
@@ -108,10 +124,172 @@ ul{
     outline:none;
 }
 
+/* FILTRES */
+.filtres{
+    display: inline-flex;
+}
+.filtre-title{
+    font-weight: 700;
+}
+.filtre-item{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 20px;
+    border: #F2F2F2 2px solid;
+    border-radius: 50px;
+}
+.filtre-item-icon{
+    display: flex;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border: #DEEBFF 2px solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    padding: 15px;
+}
+.filtre-item-text{
+    position: relative;
+    font-weight: 700;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+/* INFORMATIONS */
+.informations{
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.informations i{
+    color: #0065FC;
+    padding: 5px;
+    margin-right: 10px;
+    border: #F2F2F2 2px solid;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+}
+
+/* HEBERGEMENT */
+.hebergement{
+    flex: 2;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin: 0 30px 0 0;
+}
+.hebergement-title{
+    margin: 30px 0 10px 30px;
+    font-weight: 800;
+}
+.hebergement-plus{
+    margin: 5px 0 30px 30px;
+    font-weight: 700;
+}
+.hebergement-plus a,
+.hebergement-plus a:hover{
+    color: black;
+    text-decoration: none;
+}
+.hebergement-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+}
+.hebergement-item{
+    width: 27%;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+}
+.hebergement-item img{
+    width: 100%;
+    height: 110px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.hebergement-item h3{
+    font-size: 15px;
+    margin: 5px 0;
+}
+.hebergement-item p{
+    margin: 5px 0;
+}
+.hebergement-item-content{
+    margin: 10px 13px;
+}
+.hebergement-item-content i,
+.popular-item-content i{
+    color: #F2F2F2;
+}
+.hebergement-item-content i.active,
+.popular-item-content i.active{
+    color: #0065FC;
+}
+
+/* POPULAR */
+.popular{
+    flex: 1;
+    background-color: #F2F2F2;
+}
+.popular-content{
+    flex-direction: column;
+}
+.popular-title h2{
+    padding: 30px 30px 0 30px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.popular-title i{
+    padding: 30px 30px 30px 0;
+    font-size: 25px;
+}
+.popular-item{
+    display: flex;
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 25px;
+}
+.popular-item img{
+    height: 126px;
+    width: 135px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.popular-item-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.popular-item-content h3{
+    margin: 0;
+}
+.popular-item-content p{
+    margin: 5px 0;
+}
+.popular-item-content-note{
+    margin-top: auto;
+}
+
 /* FOOTER */
 footer{
     background-color: #F2F2F2;
     padding: 20px;
+    margin-top: 30px;
 }
 footer a{
     text-decoration: none;
@@ -129,12 +307,6 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
     /* CLASS UTILES */
     .content{
         margin: 0;
-    }
-    .display-none{
-        display: none;
-    }
-    .display-block{
-        display: block;
     }
 
     /* BARRE DE NAVIGATION */
@@ -183,8 +355,33 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
     }
 }
 
+/** Version Tablette  */
+@media only screen and (max-width: 992px) {
+    /* HEBERGEMENT */
+    .hebergement{
+        flex: 0 0 100%;
+        background-color: white;
+        order: 1;
+    }
+    .hebergement-item{
+        width: 100%;
+    }
+    .hebergement-item img{
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /* POPULAR */
+    .popular{
+        flex: 0 0 100%;
+        order: 0;
+    }
+}
+
 /** Version ordinateur  */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 993px) {
     /* CLASS UTILES */
     .display-lg-none{
         display: none;
@@ -197,6 +394,11 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
     .navigation-item.active, .navigation-item:hover{
         padding: 35px 15px 0 15px;
         border-top: #0065FC 3px solid;
+    }
+
+    /* POPULAR */
+    .popular{
+        border-radius: 20px;
     }
 
     /* FOOTER */
