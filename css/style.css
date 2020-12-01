@@ -1,0 +1,15 @@
+/*
+
+    Couleur bleu #0065FC, bleu clair #DEEBFF et gris #F2F2F2
+
+*/
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../font/Raleway-Italic_wght.ttf") format("truetype"),
+    url("../font/Raleway_wght.ttf") format("truetype");
+}
+
+html{
+    font-family: "Raleway", serif;
+}
