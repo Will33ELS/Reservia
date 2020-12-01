@@ -126,22 +126,29 @@ ul{
 
 /* FILTRES */
 .filtres{
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
 }
 .filtre-title{
     font-weight: 700;
 }
 .filtre-item{
+    margin: 10px;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 55px;
+    padding-right: 10px;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    margin: 20px;
     border: #F2F2F2 2px solid;
     border-radius: 50px;
 }
 .filtre-item-icon{
-    display: flex;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    box-sizing: border-box;
     color: #0065FC;
     background-color: #DEEBFF;
     border: #DEEBFF 2px solid;
@@ -160,6 +167,7 @@ ul{
     width: 1%;
     min-width: 0;
     margin-bottom: 0;
+    line-height: 46px;
 }
 
 /* INFORMATIONS */
