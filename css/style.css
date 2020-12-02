@@ -311,25 +311,33 @@ ul{
 
 /* ACTIVITY */
 .activity-content{
-    position: relative;
-    box-sizing: content-box;
     display: flex;
-    flex-flow: column wrap;
-    height: 800px;
-    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 50vh;
 }
 .activity-item{
     border-radius: 20px;
     box-shadow: 2px 2px 2px #f1f1f1;
-
-    box-sizing: content-box;
-    width: 33.33%;
 }
-.activity-item img{
+.activity-item .img{
+    margin: 5px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    height: 150px;
-    width: 100%;
+}
+.activity-item img{
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
 .activity-item h3{
     padding-left: 15px;
@@ -453,14 +461,14 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
     /* ACTIVITY */
     .activity-item:nth-child(1),
     .activity-item:nth-child(4){
-        height: 100%;
+        flex: 0 0 100%;
     }
 
     .activity-item:nth-child(2),
     .activity-item:nth-child(3),
     .activity-item:nth-child(5),
     .activity-item:nth-child(6){
-        height: 50%;
+        flex: 0 0 50%;
     }
 
     /* FOOTER */
