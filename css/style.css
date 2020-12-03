@@ -44,7 +44,7 @@ ul{
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     pointer-events: auto;
     content: "";
     background-color: rgba(0,0,0,0);
@@ -230,12 +230,33 @@ ul{
 }
 .hebergement-item{
     width: 27%;
-    padding: 5px;
     margin: 20px;
+    padding: 5px;
     border-radius: 20px;
     background-color: white;
     position: relative;
     box-shadow: 2px 2px 2px #f1f1f1;
+    transition: all 0.2s;
+}
+.hebergement-item:hover{
+    box-shadow: 3px 3px 3px gray;
+}
+
+.hebergement-item .img{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 110px;
+}
+.hebergement-item img{
+    display: none;
+}
+
+.hebergement-item figure{
+    margin: 0;
 }
 .hebergement-item img{
     width: 100%;
@@ -287,6 +308,10 @@ ul{
     background-color: white;
     border-radius: 25px;
     box-shadow: 2px 2px 2px #f1f1f1;
+    transition: all 0.2s;
+}
+.popular-item:hover{
+    box-shadow: 3px 3px 3px gray;
 }
 .popular-item img{
     height: 126px;
@@ -310,6 +335,9 @@ ul{
 }
 
 /* ACTIVITY */
+.activity{
+    margin: 50px
+}
 .activity-content{
     display: flex;
     flex-wrap: wrap;
@@ -431,6 +459,14 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
         height: 150px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+    }
+
+    /* FILTRE */
+    .filtres{
+        margin-top: 35px;
+    }
+    .filtre-title{
+        flex: 0 0 100%;
     }
 
     /* ACTIVITY */
