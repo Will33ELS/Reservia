@@ -64,6 +64,8 @@ ul{
 .navigation{
     float: right;
     display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
 }
 .navigation-item{
     display: block;
@@ -241,28 +243,15 @@ ul{
 .hebergement-item:hover{
     box-shadow: 3px 3px 3px gray;
 }
-
-.hebergement-item .img{
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+.hebergement-item img{
     width: 100%;
     height: 110px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-.hebergement-item img{
-    display: none;
-}
-
 .hebergement-item figure{
     margin: 0;
-}
-.hebergement-item img{
-    width: 100%;
-    height: 110px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 .hebergement-item h3{
     font-size: 15px;
@@ -377,7 +366,7 @@ ul{
 /* FOOTER */
 footer{
     background-color: #F2F2F2;
-    padding: 20px;
+    padding: 0 80px;
     margin-top: 30px;
 }
 footer a{
@@ -400,7 +389,10 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
     /* BARRE DE NAVIGATION */
     .register{
         order: 0;
-        align-content: end;
+        margin-left: auto;
+    }
+    .navigation{
+        order: 1;
     }
     .logo{
         margin: 20px 0 0 20px;
@@ -454,12 +446,6 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
     .hebergement-item{
         width: 100%;
     }
-    .hebergement-item img{
-        width: 100%;
-        height: 150px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
 
     /* FILTRE */
     .filtres{
@@ -486,13 +472,6 @@ footer a:hover{ /* PAS DEMANDE DANS LE CDC, A DEMANDER SI GENANT*/
 
 /** Version ordinateur  */
 @media only screen and (min-width: 993px) {
-    /* CLASS UTILES */
-    .display-lg-none{
-        display: none;
-    }
-    .display-lg-block{
-        display: block;
-    }
 
     /* BARRE DE NAVIGATION */
     .navigation-item.active, .navigation-item:hover{
