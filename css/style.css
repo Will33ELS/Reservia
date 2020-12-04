@@ -134,6 +134,7 @@ ul{
     align-items: center;
     flex-wrap: wrap;
     align-content: stretch;
+    margin-top: 25px;
 }
 .filtre-title{
     font-weight: 700;
