@@ -86,7 +86,7 @@ ul{
 /* SEARCH */
 .search-form{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: stretch;
     margin-top: 15px;
 }
@@ -122,6 +122,13 @@ ul{
     background-color: #DEEBFF;
     border: none;
     outline:none;
+}
+.search-button::before {
+    content: "";
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    font-style: normal;
+    font-weight: 900;
+    color: white;
 }
 
 /* FILTRES */
@@ -391,6 +398,12 @@ footer a:hover{
         border-top: #0065FC 3px solid;
     }
 
+    /* SEARCH */
+    .search-button::before {
+        font-family: "Raleway", serif;
+        content: "Rechercher";
+    }
+
     /* HEBERGEMENT */
     .hebergement-item{
         width: 27%;
@@ -404,6 +417,11 @@ footer a:hover{
     /* ACTIVITY */
     .activity{
         margin-top: 50px;
+    }
+    .activity-item h3{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     /* FOOTER */
@@ -422,6 +440,11 @@ footer a:hover{
     .hebergement-title, .popular-title h2{
         font-size: 1.2em;
     }
+
+    /* FOOTER */
+    .a-propos, .nos-hebergements, .assistance{
+        width: 25%;
+    }
 }
 
 /** Version Tablette  */
@@ -431,6 +454,9 @@ footer a:hover{
         flex: 0 0 100%;
         background-color: white;
         order: 1;
+    }
+    .hebergement-title, .popular-title h2{
+        font-size: 1.2em;
     }
 
     /* FILTRE */
@@ -442,15 +468,15 @@ footer a:hover{
     }
 
     /* ACTIVITY */
-    .activity-content {
-        flex-direction: row;
-        height: 1500px;
+    .activity-content{
+        justify-content: space-evenly;
     }
     .activity-item {
-        flex: 0 0 100%;
+        width: 30%;
         height: 200px;
         border-radius: 20px;
     }
+
     .activity-item-img {
         height: 135px;
     }
@@ -520,6 +546,17 @@ footer a:hover{
         margin: 5px;
     }
 
+    /* ACTIVITY */
+    .activity-content {
+        flex-direction: row;
+        height: 1500px;
+    }
+    .activity-item {
+        flex: 0 0 100%;
+        height: 200px;
+        border-radius: 20px;
+    }
+
     /* FOOTER */
     .a-propos, .nos-hebergements, .assistance{
         width: 100%;
@@ -531,5 +568,10 @@ footer a:hover{
     /* HEBERGEMENT */
     .hebergement-item{
         width: 100%;
+    }
+
+    /* SEARCH */
+    .search-icon {
+        display: none;
     }
 }
