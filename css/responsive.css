@@ -1,0 +1,208 @@
+/** Version ordinateur  */
+@media only screen and (min-width: 1291px) {
+
+    /* BARRE DE NAVIGATION */
+    .navigation-item.active, .navigation-item:hover{
+        padding: 35px 15px 0 15px;
+        border-top: #0065FC 3px solid;
+    }
+
+    /* SEARCH */
+    .search-button::before {
+        font-family: "Raleway", serif;
+        content: "Rechercher";
+    }
+
+    /* HEBERGEMENT */
+    .hebergement-item{
+        width: 27%;
+    }
+
+    /* POPULAR */
+    .popular{
+        border-radius: 20px;
+    }
+
+    /* ACTIVITY */
+    .activity{
+        margin-top: 50px;
+    }
+    .activity-item h3{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /* FOOTER */
+    .a-propos, .nos-hebergements, .assistance{
+        width: 33%;
+    }
+}
+
+/* Version Moyen */
+@media only screen and (max-width: 1290px){
+    /* HEBERGEMENT */
+    .hebergement-item {
+        width: 45%;
+        margin: 12px;
+    }
+    .hebergement-title, .popular-title h2{
+        font-size: 1.2em;
+    }
+
+    /* FOOTER */
+    .a-propos, .nos-hebergements, .assistance{
+        width: 33%;
+    }
+}
+
+/** Version Tablette  */
+@media only screen and (max-width: 1125px) {
+    header{
+        margin: 0 15px;
+    }
+
+    .search{
+        margin: 0 20px;
+    }
+
+    /* HEBERGEMENT */
+    .hebergement{
+        flex: 0 0 100%;
+        background-color: white;
+        order: 1;
+    }
+    .hebergement-content{
+        margin: 0 15px;
+    }
+    .hebergement-plus{
+        margin-top: 20px;
+    }
+    .hebergement-title, .popular-title h2{
+        font-size: 1.2em;
+    }
+
+    /* FILTRE */
+    .filtres{
+        margin-top: 35px;
+    }
+    .filtre-title{
+        flex: 0 0 100%;
+    }
+
+    /* ACTIVITY */
+    .activity-content{
+        justify-content: space-evenly;
+    }
+    .activity-item {
+        width: 30%;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .activity-item-img {
+        height: 135px;
+    }
+    .activity-item:nth-child(3n+1) .activity-item-img {
+        height: 135px;
+    }
+
+    /* POPULAR */
+    .popular{
+        padding-bottom: 30px;
+        flex: 0 0 100%;
+        order: 0;
+    }
+    .popular-item{
+        margin: 5px 20px;
+    }
+}
+
+/** Version Mobile  */
+@media only screen and (max-width: 767px) {
+    header{
+        margin: 0;
+    }
+
+    /* CLASS UTILES */
+    .content{
+        margin: 0;
+    }
+
+    /* BARRE DE NAVIGATION */
+    .register{
+        order: 0;
+        margin-left: auto;
+    }
+    .navigation{
+        order: 1;
+    }
+    .logo{
+        margin: 20px 0 0 20px;
+    }
+    .navigation-item{
+        flex: 1;
+        color: black;
+        margin: 0;
+        text-align: center;
+        border-bottom: #F2F2F2 3px solid;
+        padding: 10px 0 10px 0;
+    }
+    .navigation-item.active, .navigation-item:hover{
+        border-bottom: #0065FC 3px solid;
+    }
+    .navigation{
+        width: 100%;
+    }
+
+    /* SEARCH */
+    .search{
+        margin: 0 15px;
+    }
+    .search-title{
+        margin-top: 25px;
+    }
+    .search-subtitle{
+        margin: 5px 0;
+    }
+    .search-form{
+        margin-top: 35px;
+    }
+    .search-button{
+        margin-left: -15px;
+        border-radius: 15px;
+    }
+
+    .informations{
+        margin: 25px 0 40px 0;
+    }
+
+    /* HEBERGEMENT */
+    .hebergement-item{
+        margin: 5px;
+    }
+
+    /* ACTIVITY */
+    .activity-content {
+        flex-direction: row;
+        height: 1500px;
+    }
+    .activity-item {
+        flex: 0 0 100%;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    /* FOOTER */
+    .a-propos, .nos-hebergements, .assistance{
+        width: 100%;
+    }
+}
+
+/** Version Petit écran  */
+@media only screen and (max-width: 450px) {
+    /* HEBERGEMENT */
+    .hebergement-item{
+        width: 100%;
+    }
+}
