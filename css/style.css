@@ -112,6 +112,7 @@ ul{
     border-bottom-right-radius: 12px;
     border: none;
     transition: background-color 0.2s;
+    cursor: pointer;
 }
 .search-button:focus,
 .search-button:hover{
